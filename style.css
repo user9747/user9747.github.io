@@ -66,21 +66,29 @@ li a:hover {
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
-    transition-duration: 2s;
+    transition-duration: 1s;
     border-left:.5px solid #ffffff;
-    border-right:.5px solid #a3a4a5;
-   
 }
   
 .nav-pills a:hover {
     text-decoration:none; 
     color: rgb(95, 114, 90);
     border-left:.7px solid #ffffff;
-    background-color: #f6faf8;
+    background-color: #ebf3ef;
 }
 .nav-pills a:focus {
     text-decoration:none; 
     color: rgb(95, 114, 90);
     border-left:.7px solid #909192;
-    background-color: #f6faf8;  
+    background-color: #ebf3ef;  
+}
+.about-nav .row{
+    flex-wrap: nowrap;
+}
+.right-border{
+    border-right:.5px solid #a3a4a5;
+}
+
+.about-nav .tab-content{
+    list-style-type: none;
 }
