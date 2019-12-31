@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>👾 User9747</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -30,15 +31,15 @@
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span style="padding: 3px;">Hello</span>
+                <span style="padding: 3px;border:.5px solid #a3a4a5;">Hello</span>
             </button>
 
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="nav navbar-nav ml-auto">
-                    <li><a href="">[1] about</a></li>
-                    <li><a href="">[2] What i do</a></li>
-                    <li><a href="">[3] @</a></li>
-                    <li><a href="">[4] Resume</a></li>
+                    <li><a href="#about">[1] about</a></li>
+                    <li><a href="#whatido">[2] What i do</a></li>
+                    <li><a href="#contact">[3] @</a></li>
+                    <li><a href="https://drive.google.com/file/d/1TxHSiNi-dr-wkcwDd7yqkbY0ImBVZpoQ/view">[4] Resume</a></li>
                 </ul>
             </div>
         </div>
@@ -52,7 +53,7 @@
             <div class="col-md-4">
                 <h1 class="myName">User9747👾</h1>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="about">
                 <p class="about">Hey there i am User9747 (aka) Albin Antony. <br> I love working on interesting projects
                     no matter the field. But mostly a developer (noob). </p>
             </div>
@@ -61,7 +62,9 @@
     <!-- </div> -->
 
 
-
+    <div class="container">
+        <h1 class="heading">[2] What I Do</h1>
+    </div>
     <div class="about-nav">
         <div class="row justify-content-md-center">
             <div class="col-md-2 col-xs-2 right-border">
@@ -70,18 +73,20 @@
                         aria-controls="v-pills-home" aria-selected="true">Skills</a>
                     <a id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
                         aria-controls="v-pills-profile" aria-selected="false">Hobbies</a>
+                    <a id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-interests" role="tab"
+                        aria-controls="v-pills-interests" aria-selected="false">Interests</a>
                 </div>
             </div>
             <div class="col-md-8 col-xs-4">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                         aria-labelledby="v-pills-home-tab">
-                            <li>WEB</li>
-                            <li>Node.js</li>
-                            <li>Vue.js</li>
-                            <li>Express.js</li>
-                            <li>React Native</li>
-                            <li>Firebase</li>
+                        <li>WEB-Full-Stack</li>
+                        <li>Node.js</li>
+                        <li>Vue.js</li>
+                        <li>Express.js</li>
+                        <li>React Native</li>
+                        <li>Firebase</li>
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                         aria-labelledby="v-pills-profile-tab">
@@ -89,10 +94,23 @@
                         <li>Books</li>
                         <li>Youtube</li>
                     </div>
+                    <div class="tab-pane fade" id="v-pills-interests" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">
+                        <li>Hacking</li>
+                        <li>CTF</li>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Footer -->
+    <footer>
+        <nav class="navbar footer ">
+            <a href="https://www.linkedin.com/in/user9747" class="fa fa-linkedin"></a>
+            <a href="https://twitter.com/albin_user9747" class="fa fa-twitter"></a>
+            <a href="https://github.com/user9747" class="fa fa-github"></a>
+        </nav>
+    </footer>
     <!-- Hey there Nice to see you poking out here :).... Contact me for any queries -->
 </body>
 <script>
