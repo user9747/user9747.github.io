@@ -38,10 +38,31 @@ li a:hover {
     padding-left:3%;
 }
 .heading{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2rem;
     padding-top: 5%;
     padding-bottom: 3%;
+}
+.heading2{
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+.heading3{
+    font-weight: 100;
+    font-size: 1.05rem;
+    text-align: left;
+    color:  rgb(98, 134, 88);
+    padding-left: 5.5vw;
+}
+.project_back{
+    background-color:   #ebf3ef; 
+}
+.desc{
+    font-weight: 100;
+    font-size: .9rem;
+    text-align: justify;
 }
 .about{
     padding-top:4% ;
@@ -119,10 +140,21 @@ footer a:hover {
     border-bottom:.5px solid #a3a4a5;
     
 }
+.projects a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+}
+
+.projects a:hover {
+    text-decoration:none; 
+    color: rgb(95, 114, 90);  
+}
 .fa {
     font-size: 25px;
     width: 50px;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
   }
   
