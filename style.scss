@@ -1,0 +1,139 @@
+html {
+  height: 100%;
+  background: white;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Fira Code", monospace !important;
+  margin: 0% 5% 5% 15%;
+  position: relative;
+  // background: rgba(250, 228, 186, 0.568);
+  border-left: 1px solid rgb(212, 210, 210);
+  background: rgba(255, 255, 255, 0.801);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: white;
+  .nav-head {
+    width: 15%;
+    text-align: center;
+    font-size: 25px;
+  }
+  a {
+    color: black;
+  }
+  .nav-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    max-height: 0px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &:hover {
+    a {
+      color: white;
+      &:hover {
+        color: #a0a0a0;
+      }
+    }
+    .nav-bg {
+      background: black;
+      max-height: 100px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  padding: 0;
+  li {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.bg {
+  font-size: 20rem;
+  font-weight: 800;
+  color: hsl(194deg 68% 83%);
+  position: fixed;
+  top: 50%;
+  translate: 0px -50%;
+  left: calc(15% - 1ch - 0.07em);
+  z-index: -1;
+  .bg-text {
+    color: rgb(176, 219, 245);
+  }
+}
+
+.container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+
+.hero {
+  font-size: 3rem;
+  font-weight: 500;
+  .sub {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem;
+  }
+}
+
+.stacks {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.stack {
+  display: flex;
+  gap: 1rem;
+  // background: red;
+  font-size: 1.3rem;
+  max-width: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  h3 {
+    margin: 0;
+    line-height: 1.5rem;
+    margin-right: 1rem;
+    width: 8.5rem;
+    color: #444444;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
