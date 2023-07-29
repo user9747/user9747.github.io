@@ -1,7 +1,16 @@
 var bgText = document.getElementById("bg-text");
 var bgValue = "About";
-var typedText = ["", "", "", "", ""];
+var typedText = [];
 var mode = "visual";
+
+const openBurger = () => {
+  var element = document.getElementById("nav");
+  element.classList.add("nav-mobile");
+};
+const closeBurger = () => {
+  var element = document.getElementById("nav");
+  element.classList.remove("nav-mobile");
+};
 
 const targets = document.querySelectorAll(".container");
 
@@ -49,11 +58,21 @@ const setBackground = (val) => {
 };
 
 const setTypedText = (key) => {
-  typedText.push(key);
-  typedText.shift();
+  switch (key) {
+    case "/":
+      typedText = [];
+      break;
+
+    default:
+      if (typedText.length >= 5) {
+        return;
+      }
+      typedText.push(key);
+      break;
+  }
 };
 
-const setCommandText = (text) => {
+const setCommandText = () => {
   let commandText = document.getElementById("command-text");
   commandText.innerHTML = "/" + typedText.join("");
 };
@@ -61,7 +80,7 @@ const setCommandText = (text) => {
 const setModeVisual = () => {
   mode = "visual";
   document.getElementById("command").style.display = "none";
-  typedText = ["", "", "", "", ""];
+  typedText = [];
 };
 
 const setTheme = () => {
@@ -78,12 +97,8 @@ const setTheme = () => {
   }
 };
 window.onkeydown = (e) => {
-  console.log(e.key);
   if (mode === "command" && e.key === "Escape") {
     setModeVisual();
-  }
-  if (e.key.length != 1) {
-    return;
   }
 
   if (mode !== "command" && e.key === "/") {
@@ -95,8 +110,17 @@ window.onkeydown = (e) => {
   if (mode !== "command") {
     return;
   }
-  setTypedText(e.key);
+
+  if (e.key.length != 1) {
+    if (e.key === "Backspace" && typedText.length) {
+      typedText = typedText.slice(0, -1);
+    }
+  } else {
+    setTypedText(e.key);
+  }
+
   setCommandText();
   setTheme();
-  console.log(typedText.join(""));
 };
+
+// setTheme();

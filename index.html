@@ -24,13 +24,17 @@
   </head>
 
   <body>
+    <!-- BACKGROUND TEXT -->
     <div class="bg">
       <div class="bg-text" id="bg-text">About</div>
     </div>
-    <nav class="nav">
+
+    <!-- NAVBAR -->
+    <nav class="nav" id="nav">
+      <span class="x" onclick="closeBurger()"></span>
       <div class="nav-head">👾</div>
-      <ul class="menu">
-        <li><a href="#about"> [0] about</a></li>
+      <ul class="menu" onclick="closeBurger()">
+        <li><a href="#about">[0] about</a></li>
         <li><a href="#whatido">[1] what i do</a></li>
         <li><a href="#blog">[2] blog</a></li>
         <li><a href="#contact">[3] @</a></li>
@@ -43,26 +47,31 @@
       </ul>
       <div class="nav-bg"></div>
     </nav>
+    <img
+      src="./assets/icons/burger.svg"
+      class="burger"
+      onclick="openBurger()"
+    />
 
     <section class="container" id="about">
-      <div>
+      <div style="width: 100%">
         <h1 class="hero">
           Hello World!,
           <br />
           My name is <b>Albin Antony</b>(user9747)👾.
         </h1>
 
-        <p style="width: 70%; margin-top: 6%">
+        <p style="margin-top: 6%">
           I am a developer by profession. I love building new stuff, needn't be
           super cool as long as i get hooked.
-        </p>
-        <p style="width: 70%">
+          <br />
+          <br />
           One thing i like about myself is that I don't really care if i am
           doing frontend, backend, security or even some AI/ML as long i have
           fun learning / doing it. I've done all kinds of stuff game dev, web
           dev, security stuff and some AI/ML
-        </p>
-        <p style="width: 70%">
+          <br />
+          <br />
           I like watching all kinds of movies, anime, f1. Other that some
           gaming, mostly stuff i can play with my friends and sim racing on a
           joystick.
@@ -70,9 +79,9 @@
       </div>
     </section>
 
-    <section id="whatido" class="container">
-      <div>
-        <h1>[1] What I Do</h1>
+    <section class="container" id="whatido">
+      <div style="width: 100%">
+        <h2>[1] What I Do</h2>
         <div class="stacks" style="margin-top: 8%">
           <div class="stack">
             <h3>Skills</h3>
@@ -119,8 +128,8 @@
     </section>
 
     <section class="container" id="xp">
-      <div>
-        <h1>[1.0] Experience</h1>
+      <div style="width: 100%">
+        <h2>[1.0] Experience</h2>
         <div class="xp-block">
           <h2>Finbox.in (Present)</h2>
           <p>
@@ -155,10 +164,10 @@
     </section>
 
     <section class="container" id="projects">
-      <div>
-        <h1>[1.1] Projects</h1>
+      <div style="width: 100%">
+        <h2>[1.1] Projects</h2>
         <div class="xp-block">
-          <h2>FireWatcher</h2>
+          <h3>FireWatcher</h3>
           <p>
             An application that supports crowdsourcing, fire reporting and
             verification, notifying the stakeholders and visualizing essential
@@ -166,14 +175,14 @@
           </p>
         </div>
         <div class="xp-block">
-          <h2>Project Maa</h2>
+          <h3>Project Maa</h3>
           <p>
             Developed a Web app for pregnant women.A companion app for mothers.
             Developed as part of Hash hackathon.
           </p>
         </div>
         <div class="xp-block">
-          <h2>Grievance Redressal System</h2>
+          <h3>Grievance Redressal System</h3>
           <p>
             Online platform for students and faculties to submit issues and
             grievances in the college.
@@ -184,10 +193,10 @@
     </section>
 
     <section class="container" id="fun-projects">
-      <div>
-        <h1>[1.2] Fun Projects</h1>
+      <div style="width: 100%">
+        <h2>[1.2] Fun Projects</h2>
         <div class="xp-block">
-          <h2>Vazha</h2>
+          <h3>Vazha</h3>
           <p>
             A malayalam based scripting language. Basically a malayalam version
             of Python3.
@@ -195,7 +204,7 @@
           </p>
         </div>
         <div class="xp-block">
-          <h2>Vazha Sense</h2>
+          <h3>Vazha Sense</h3>
           <p>
             A VScode extension for vazha script. Intellisense for manglish to
             vazha script(malayalam) coding.
@@ -203,7 +212,7 @@
           </p>
         </div>
         <div class="xp-block">
-          <h2>Hand Brick Breaker</h2>
+          <h3>Hand Brick Breaker</h3>
           <p>
             A port of the classic Brick Breaker. The paddle can be controlled
             with hand movements.
@@ -212,7 +221,7 @@
           </p>
         </div>
         <div class="xp-block">
-          <h2>Pocket Manager</h2>
+          <h3>Pocket Manager</h3>
           <p>
             Android app written completely in flutter to track borrowed and lent
             money. Developed for learning fultter.
@@ -223,10 +232,10 @@
     </section>
 
     <section class="container" id="freelance">
-      <div>
-        <h1>[1.3] Freelance</h1>
+      <div style="width: 100%">
+        <h2>[1.3] Freelance</h2>
         <div class="xp-block">
-          <h2>Rohil.in</h2>
+          <h3>Rohil.in</h3>
           <p>
             A simple minimalistic portfolio website with dark and light theme.
             <a href="https://rohil.in" target="_blank"><u>[Link]</u></a>
@@ -234,7 +243,7 @@
         </div>
 
         <div class="xp-block">
-          <h2>Auo2studio.com</h2>
+          <h3>Auo2studio.com</h3>
           <p>
             Developed and hosted a wordpress theme for a recording studio
             (auo2studio).
@@ -244,7 +253,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer id="contact">
       <a href="https://www.linkedin.com/in/user9747"
         ><img src="./assets/icons/linkedin.svg" />
@@ -260,8 +269,10 @@
         ><img src="./assets/icons/email.svg"
       /></a>
     </footer>
-    <!-- Hey there Nice to see you poking out here :).... Contact me for any queries -->
 
+    <!-- Hey there Nice to see you poking out here :) -->
+
+    <!-- COMMANDS -->
     <div class="command" id="command">
       <div class="text" id="command-text"></div>
     </div>
