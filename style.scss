@@ -1,3 +1,5 @@
+@import "theme.scss";
+@import "base.scss";
 $small: 600px;
 $medium: 900px;
 
@@ -18,22 +20,9 @@ html {
   --primary: #212529;
   --secondary: #343a40;
   --tertiary: #495057;
+  --bgText: rgb(176, 219, 245);
 }
 
-html[data-theme="dark"] {
-  // --base: #000000;
-  // --base-sec: #ffffff;
-  --body: #212529f0;
-  // --text: #ffffff;
-  // --text-sec: #000000;
-
-  //
-  --bg: #212529;
-  --border: #ced4da;
-  --primary: #f8f9fa;
-  --secondary: #e9ecef;
-  --tertiary: #dee2e6;
-}
 body {
   min-height: 100%;
   width: 57%;
@@ -80,6 +69,13 @@ p {
   font-size: 1.125rem; /* 18px */
   line-height: 1.75rem; /* 28px */
   color: var(--tertiary);
+}
+
+a {
+  color: var(--primary);
+  &:hover {
+    color: var(--secondary);
+  }
 }
 
 .nav {
@@ -185,7 +181,7 @@ p {
   left: calc(15% - 1ch - 0.07em);
   z-index: -1;
   .bg-text {
-    color: rgb(176, 219, 245);
+    color: var(--bgText);
   }
   @media screen and (max-width: $small) {
     font-size: 6rem;
@@ -338,4 +334,10 @@ footer {
   100% {
     transform: none;
   }
+}
+
+.themes {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
 }

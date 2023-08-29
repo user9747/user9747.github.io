@@ -272,10 +272,24 @@
 
     <!-- Hey there Nice to see you poking out here :) -->
 
+    <div class="select themes">
+      <select name="themes" id="themes" onchange="onThemeChange()">
+        <option value="light">light</option>
+        <option value="dark">dark</option>
+        <option value="dracula">dracula</option>
+        <option value="gruvbox-dark">gruvbox-dark</option>
+        <option value="gruvbox-light">gruvbox-light</option>
+        <option value="solorized-dark">solorized-dark</option>
+        <option value="solorized-light">solorized-light</option>
+        <option value="random">random</option>
+      </select>
+    </div>
+
     <!-- COMMANDS -->
     <div class="command" id="command">
       <div class="text" id="command-text"></div>
     </div>
   </body>
+  <script src="utils.js"></script>
   <script src="main.js"></script>
 </html>

@@ -2,6 +2,17 @@ var bgText = document.getElementById("bg-text");
 var bgValue = "About";
 var typedText = [];
 var mode = "visual";
+var isRandomTheme = false;
+
+const colorThemes = [
+  "light",
+  "dark",
+  "dracula",
+  "gruvbox-dark",
+  "gruvbox-light",
+  "solorized-dark",
+  "solorized-light",
+];
 
 const openBurger = () => {
   var element = document.getElementById("nav");
@@ -11,6 +22,26 @@ const closeBurger = () => {
   var element = document.getElementById("nav");
   element.classList.remove("nav-mobile");
 };
+
+const getThemeFromLocalStorage = () => {
+  const theme = getLocalStorage("theme");
+  if (theme && theme !== "random") {
+    document.documentElement.setAttribute("data-theme", theme);
+    let themeObj = document.getElementById("themes");
+    themeObj.value = theme;
+  } else if (theme === "random") {
+    isRandomTheme = true;
+  }
+};
+
+getThemeFromLocalStorage();
+
+if (isRandomTheme) {
+  document.documentElement.setAttribute(
+    "data-theme",
+    colorThemes[getRandomIntInclusive(0, colorThemes.length - 1)]
+  );
+}
 
 const targets = document.querySelectorAll(".container");
 
@@ -123,4 +154,13 @@ window.onkeydown = (e) => {
   setTheme();
 };
 
-// setTheme();
+const onThemeChange = () => {
+  var theme = document.getElementById("themes");
+  document.documentElement.setAttribute("data-theme", theme.value);
+  setLocalStorage("theme", theme.value);
+  if (theme.value === "random") {
+    isRandomTheme = true;
+  } else {
+    isRandomTheme = false;
+  }
+};
